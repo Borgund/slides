@@ -27,6 +27,7 @@ jobs:
       - name: build
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           pnpm run build
       - name: Upload Artifacts
