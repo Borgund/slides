@@ -1,0 +1,13 @@
+@import url('$lib/deck/themes/scaledarktheme.scss');
+body {
+	background-color: #021e40;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	a,
+	a:visited {
+		color: white;
+		&:hover {
+			color: #1e9de1;
+		}
+	}
+}

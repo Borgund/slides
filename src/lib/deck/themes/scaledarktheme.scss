@@ -1,0 +1,90 @@
+/**
+ * ScaleAQ/ScaleUI based theme for reveal.js.
+ * Author: Adrian Borgund
+ */
+
+// Default mixins and settings -----------------
+//@import '../template/mixins';
+@import 'reveal.js/css/theme/template/mixins';
+//@import '../template/settings';
+@import 'reveal.js/css/theme/template/settings';
+// ---------------------------------------------
+
+// Include theme-specific fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+$headingFont: Roboto, Impact, sans-serif;
+$headingTextTransform: none;
+$headingFontWeight: bold;
+
+//Import ScaleUI styles and css variables
+@import '@scaleaq/scaleui-theme/dist/style.css';
+
+// ScaleUI colors
+$base03: #8f8f8f;
+$base02: #7a7a7a;
+$base01: #4d4d4d;
+$base00: #3d3d3d;
+$base0: #333333;
+$base1: #ffffff;
+$base2: #377cdc;
+$base3: #021e40;
+$yellow: #f9d206;
+$orange: #dd7f3c;
+$red: #c24c44;
+$magenta: #a192ec;
+$violet: #8270db;
+$blue: #5394e9;
+$cyan: #1e9de1;
+$green: #4cb276;
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: $base1;
+$headingColor: $base1;
+$headingTextShadow: none;
+$backgroundColor: $base3;
+$linkColor: $blue;
+$linkColorHover: $cyan;
+$selectionBackgroundColor: $orange;
+
+// Change text colors against light slide backgrounds
+@include light-bg-text-color(#333);
+
+// Theme template ------------------------------
+@import 'reveal.js/css/theme/template/theme';
+// ---------------------------------------------
+
+/* Custom Code styling: */
+code {
+	padding: 2rem !important;
+	border-radius: 1rem;
+	border: 1px solid $base1;
+}
+code:not([class]) {
+	padding: 0 0.5rem !important;
+	display: inline-flex;
+	color: $orange;
+	font-family: monospace;
+	font-size: 0.8em;
+	background-color: $base0;
+	padding: 0 0.5rem;
+}
+
+// Custom fragment styles -----------------------
+.fragment {
+	&.blur {
+		visibility: hidden;
+		filter: blur(10px);
+		&.visible {
+			visibility: visible;
+			filter: none;
+		}
+	}
+}
+
+// Logo styling -----------------------
+$logourl: 'scaleaq_logo.svg';
+body .slide-background.branded.present {
+	background-image: url($logourl);
+	background-repeat: no-repeat;
+	background-position: 2rem 2rem;
+}
