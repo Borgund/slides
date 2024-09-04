@@ -1,12 +1,10 @@
 # Hello world!
 This is written in markdown!
-Remember to use the name prop on the `<p></p>`
+Remember to use the name prop on the `<Markdown />` tag. Like:
 ```tsx
 <Markdown name='somename.md'/>
 ```
-with a file in the static folder.
-
-why no just. `nano` . 
+with a file with mathing name in the static folder.
 
 ---
 

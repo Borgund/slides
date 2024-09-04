@@ -4,6 +4,10 @@
 	5;
 </script>
 
+<svelte:head>
+	<title>Slide decks</title>
+</svelte:head>
+
 <h1>Presentations:</h1>
 <ul>
 	<li>
