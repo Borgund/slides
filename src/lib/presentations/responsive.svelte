@@ -1,8 +1,7 @@
 <script lang="ts">
-	import Code from '$lib/deck/code.svelte';
-	import Markdown from '$lib/deck/markdown.svelte';
 	import Slide from '$lib/deck/slide.svelte';
 	import Aboutme from '$lib/deck/templates/aboutme.svelte';
+	import Feedback from '$lib/deck/templates/feedback.svelte';
 	import Intro from '$lib/deck/templates/intro.svelte';
 </script>
 
@@ -14,4 +13,8 @@
 		Responsive web design is an approach to web design that makes web pages render well on a variety
 		of devices and window or screen sizes.
 	</p>
+</Slide>
+
+<Slide>
+	<Feedback />
 </Slide>

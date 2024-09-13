@@ -6,10 +6,10 @@
 	export let gradient: { from: string; to: string; direction?: string } | null = null;
 	export let background_image: string | null = null;
 	export let background_options: {
-		size: string;
-		position: string;
-		repeat: string;
-		opacity: string;
+		size?: string;
+		position?: string;
+		repeat?: string;
+		opacity?: string;
 	} | null = null;
 	export let branded: boolean = false;
 	export let iframe_background: string | null = null;
