@@ -7,20 +7,29 @@
 <svelte:head>
 	<title>Slide decks</title>
 </svelte:head>
-
-<h1>Presentations:</h1>
-<ul>
-	<li>
-		<a href="{base}/responsive">Responsive Web design</a>
-	</li>
-</ul>
+<main>
+	<h1>Presentations:</h1>
+	<ul>
+		<li>
+			<a href="{base}/responsive">Responsive Web design</a>
+		</li>
+		<li>
+			<a href="{base}/scaleui2">ScaleUI 2.0</a>
+		</li>
+	</ul>
+</main>
 
 <style>
-	ul {
+	main {
 		display: flex;
-		justify-content: center;
+		flex-direction: column;
 		align-items: center;
+	}
+	ul {
 		list-style: none;
 		padding: 0;
+	}
+	li {
+		margin: 1rem 0;
 	}
 </style>
