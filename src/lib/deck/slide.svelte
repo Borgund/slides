@@ -1,5 +1,6 @@
 <script lang="ts">
 	export let id: string | null = null;
+	export let className: string | null = null;
 	export let animate: boolean = false;
 	export let restart: boolean = false;
 	export let background_color: string | null = null;
@@ -21,7 +22,7 @@
 </script>
 
 <section
-	class={branded ? 'branded' : ''}
+	class={className ?? '' + (branded ? 'branded' : '')}
 	data-auto-animate-id={id}
 	data-auto-animate={animate || null}
 	data-auto-animate-restart={restart || null}
