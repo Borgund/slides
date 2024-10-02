@@ -2,6 +2,7 @@
 	import Reveal from 'reveal.js';
 	import Markdown from 'reveal.js/plugin/markdown/markdown';
 	import Highlight from 'reveal.js/plugin/highlight/highlight';
+	import Search from 'reveal.js/plugin/search/search';
 	import Notes from 'reveal.js/plugin/notes/notes';
 	import 'reveal.js/dist/reveal.css';
 	import 'reveal.js/dist/theme/white.css';
@@ -12,7 +13,7 @@
 
 	onMount(() => {
 		const deck = new Reveal({
-			plugins: [Markdown, Highlight, Notes],
+			plugins: [Markdown, Highlight, Notes, Search],
 			slideNumber: true,
 			showNotes: false,
 			controls: true,
@@ -27,7 +28,7 @@
 			autoAnimateEasing: 'ease',
 			autoAnimateDuration: 1,
 			hideInactiveCursor: true,
-			hideCursorTime: 1000,
+			hideCursorTime: 1000
 		}).initialize();
 	});
 </script>
