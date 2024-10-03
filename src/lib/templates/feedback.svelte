@@ -1,5 +1,6 @@
 <script lang="ts">
-	import Slide from '../slide.svelte';
+	import Slide from "$lib/deck/slide.svelte";
+
 </script>
 
 <Slide

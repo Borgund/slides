@@ -1,7 +1,6 @@
 <script>
 	import '../app.scss';
 	import { base } from '$app/paths';
-	5;
 </script>
 
 <svelte:head>

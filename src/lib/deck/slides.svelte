@@ -5,7 +5,6 @@
 	import Search from 'reveal.js/plugin/search/search';
 	import Notes from 'reveal.js/plugin/notes/notes';
 	import 'reveal.js/dist/reveal.css';
-	//import 'reveal.js/dist/theme/white.css';
 	import './themes/scaledarktheme.scss';
 	import 'reveal.js/plugin/highlight/monokai.css';
 
