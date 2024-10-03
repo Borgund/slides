@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Notes from '../notes.svelte';
-	import Slide from '../slide.svelte';
+	import Notes from '$lib/deck/notes.svelte';
+	import Slide from '$lib/deck/slide.svelte';
 	import Reachout from './reachout.svelte';
 </script>
 

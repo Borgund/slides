@@ -1,8 +1,8 @@
 <script>
 	import Code from '$lib/deck/code.svelte';
 	import Slide from '$lib/deck/slide.svelte';
-	import Intro from '$lib/deck/templates/intro.svelte';
-	import Reachout from '$lib/deck/templates/reachout.svelte';
+	import Intro from '$lib/templates/intro.svelte';
+	import Reachout from '$lib/templates/reachout.svelte';
 	import { Confetti } from 'svelte-confetti';
 </script>
 

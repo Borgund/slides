@@ -2,8 +2,9 @@
 	import Code from '$lib/deck/code.svelte';
 	import Markdown from '$lib/deck/markdown.svelte';
 	import Slide from '$lib/deck/slide.svelte';
-	import Aboutme from '$lib/deck/templates/aboutme.svelte';
-	import Intro from '$lib/deck/templates/intro.svelte';
+	import StyleEditor from '$lib/deck/styleEditor.svelte';
+	import Aboutme from '$lib/templates/aboutme.svelte';
+	import Intro from '$lib/templates/intro.svelte';
 </script>
 
 <Intro title="Hello world i guess" subtitle="Subtitles! They do sure can be long! Oh boy!" />
@@ -56,6 +57,21 @@
 </Slide>
 
 <Markdown external></Markdown>
+
+<Slide>
+	<StyleEditor
+		style={`.demo {
+    color: red;
+}
+	`}
+		template={
+`<div class="demo">
+    <p>Demo text</p>
+    <p>Demo text2</p>
+</div>`}
+		showCode
+	/>
+</Slide>
 
 <style>
 	.box {

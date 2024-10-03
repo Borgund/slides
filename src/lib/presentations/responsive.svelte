@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Slide from '$lib/deck/slide.svelte';
-	import Aboutme from '$lib/deck/templates/aboutme.svelte';
-	import Feedback from '$lib/deck/templates/feedback.svelte';
-	import Intro from '$lib/deck/templates/intro.svelte';
+	import Aboutme from '$lib/templates/aboutme.svelte';
+	import Feedback from '$lib/templates/feedback.svelte';
+	import Intro from '$lib/templates/intro.svelte';
 </script>
 
 <Intro title="Responsive web design" subtitle="Introduction" />

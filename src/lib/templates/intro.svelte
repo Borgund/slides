@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Slide from '../slide.svelte';
+	import Slide from '$lib/deck/slide.svelte';
 	export let title = 'Title';
 	export let subtitle = 'Subtitle';
 	export let logo: string = 'scaleaq_logo.svg';
