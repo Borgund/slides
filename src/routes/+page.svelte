@@ -15,6 +15,9 @@
 		<li>
 			<a href="{base}/scaleui2">ScaleUI 2.0</a>
 		</li>
+		<li>
+			<a href="{base}/turborepo">Turborepo</a>
+		</li>
 	</ul>
 </main>
 

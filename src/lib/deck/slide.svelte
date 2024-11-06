@@ -19,10 +19,16 @@
 		loop: string;
 		muted: string;
 	} | null = null;
+	export let text: { color: string; stroke?: { width: string; color: string } } | null;
+	export let heading: { color: string; stroke?: { width: string; color: string } } | null;
 </script>
 
 <section
-	class={className ?? '' + (branded ? 'branded' : '')}
+	class={className ??
+		'' +
+			(branded ? 'branded' : '') +
+			(text?.stroke ? ' text-stroke' : '') +
+			(heading?.stroke ? ' heading-stroke' : '')}
 	data-auto-animate-id={id}
 	data-auto-animate={animate || null}
 	data-auto-animate-restart={restart || null}
@@ -40,6 +46,33 @@
 	data-background-video-loop={video_background_options && video_background_options.loop}
 	data-background-video-muted={video_background_options && video_background_options.muted}
 	data-preload
+	style={`
+	${text && text.color ? `--r-main-color: ${text.color}` : ''};
+	${text && text.stroke ? `--text-stroke-width: ${text.stroke.width}; --text-stroke-color: ${text.stroke.color}; ` : ''};
+	${heading && heading.color ? `--r-heading-color: ${heading.color}` : ''};
+	${heading && heading.stroke ? `--heading-stroke-width: ${heading.stroke.width}; --heading-stroke-color: ${heading.stroke.color}; ` : ''};
+	`}
 >
 	<slot />
 </section>
+
+<style>
+	.text-stroke {
+		& p {
+			-webkit-text-stroke: var(--text-stroke-width) var(--text-stroke-color);
+		}
+	}
+	.heading-stroke {
+		& h1,
+		& h2,
+		& h3,
+		& h4,
+		& h5,
+		& h6 {
+			-webkit-text-stroke: var(--heading-stroke-width) var(--heading-stroke-color);
+		}
+	}
+	p {
+		color: var(--r-main-color);
+	}
+</style>
