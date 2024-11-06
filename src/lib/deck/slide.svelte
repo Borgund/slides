@@ -24,10 +24,10 @@
 </script>
 
 <section
-	class={(className ?? '') +
-		(branded ? 'branded' : '') +
-		(text?.stroke ? ' text-stroke' : '') +
-		(heading?.stroke ? ' heading-stroke' : '')}
+	class:branded
+	class:text-stroke={text?.stroke}
+	class:heading-stroke={heading?.stroke}
+	class={`${className}`}
 	data-auto-animate-id={id}
 	data-auto-animate={animate || null}
 	data-auto-animate-restart={restart || null}

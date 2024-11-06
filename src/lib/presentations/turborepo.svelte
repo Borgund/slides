@@ -12,7 +12,7 @@
 >
 	<Intro title="Turbocharged workflows" subtitle="Using Turborepo in mono and solo repos" />
 </Slide>
-<Slide>
+<Slide className="asd">
 	<p>ads</p>
 </Slide>
 
