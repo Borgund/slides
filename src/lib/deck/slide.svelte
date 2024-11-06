@@ -19,16 +19,15 @@
 		loop: string;
 		muted: string;
 	} | null = null;
-	export let text: { color: string; stroke?: { width: string; color: string } } | null;
-	export let heading: { color: string; stroke?: { width: string; color: string } } | null;
+	export let text: { color: string; stroke?: { width: string; color: string } } | null = null;
+	export let heading: { color: string; stroke?: { width: string; color: string } } | null = null;
 </script>
 
 <section
-	class={className ??
-		'' +
-			(branded ? 'branded' : '') +
-			(text?.stroke ? ' text-stroke' : '') +
-			(heading?.stroke ? ' heading-stroke' : '')}
+	class={(className ?? '') +
+		(branded ? 'branded' : '') +
+		(text?.stroke ? ' text-stroke' : '') +
+		(heading?.stroke ? ' heading-stroke' : '')}
 	data-auto-animate-id={id}
 	data-auto-animate={animate || null}
 	data-auto-animate-restart={restart || null}
@@ -71,8 +70,5 @@
 		& h6 {
 			-webkit-text-stroke: var(--heading-stroke-width) var(--heading-stroke-color);
 		}
-	}
-	p {
-		color: var(--r-main-color);
 	}
 </style>
