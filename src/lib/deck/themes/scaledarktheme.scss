@@ -55,9 +55,9 @@ $selectionBackgroundColor: $orange;
 
 /* Custom Code styling: */
 code {
-	padding: 2rem !important;
-	border-radius: 1rem;
+	border-radius: .5rem;
 	border: 1px solid $base1;
+	width: 99%;
 }
 code:not([class]) {
 	padding: 0 0.5rem !important;
